@@ -1,0 +1,69 @@
+[
+  {
+    "id": "sig-001",
+    "source": "calendar",
+    "title": "Stakeholder workflow review at 15:00",
+    "kind": "meeting",
+    "urgency": 5,
+    "value": 4,
+    "effort": 2,
+    "deadline_hours": 6,
+    "requires_external_action": true,
+    "blocked": false,
+    "note": "Prepare a short agenda and confirmation note before the meeting."
+  },
+  {
+    "id": "sig-002",
+    "source": "proof_asset",
+    "title": "Polish public AI secretary proof README",
+    "kind": "proof_asset",
+    "urgency": 4,
+    "value": 5,
+    "effort": 3,
+    "deadline_hours": 36,
+    "requires_external_action": false,
+    "blocked": false,
+    "note": "Improves portfolio clarity without touching external systems."
+  },
+  {
+    "id": "sig-003",
+    "source": "inbox",
+    "title": "Reply to vendor discount campaign",
+    "kind": "message",
+    "urgency": 1,
+    "value": 1,
+    "effort": 1,
+    "deadline_hours": 72,
+    "requires_external_action": true,
+    "blocked": false,
+    "note": "Low value promotional message."
+  },
+  {
+    "id": "sig-004",
+    "source": "project",
+    "title": "Run production calendar automation migration",
+    "kind": "automation",
+    "urgency": 3,
+    "value": 5,
+    "effort": 5,
+    "deadline_hours": 24,
+    "requires_external_action": true,
+    "blocked": true,
+    "blocker_reason": "Needs owner approval and a safe test window.",
+    "note": "High value but unsafe to execute today."
+  },
+  {
+    "id": "sig-005",
+    "source": "research",
+    "title": "Read long-form market report",
+    "kind": "research",
+    "urgency": 2,
+    "value": 3,
+    "effort": 4,
+    "deadline_hours": 168,
+    "requires_external_action": false,
+    "blocked": false,
+    "note": "Useful but not the best first action today."
+  }
+]
+

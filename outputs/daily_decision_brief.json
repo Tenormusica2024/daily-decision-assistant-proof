@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "signals_scanned": 5,
+    "focus_count": 2,
+    "defer_count": 2,
+    "no_go_count": 1,
+    "confirmation_queue_count": 1,
+    "safety": "sample-first / no-send / no-modify / confirmation-required"
+  },
+  "today_focus": [
+    {
+      "id": "sig-001",
+      "source": "calendar",
+      "title": "Stakeholder workflow review at 15:00",
+      "kind": "meeting",
+      "score": 24,
+      "blocked": false,
+      "requires_external_action": true,
+      "reason": "urgency=5, value=4, effort=2, deadline_boost=+4",
+      "recommended_next_step": "prepare_confirmation_before_external_action",
+      "note": "Prepare a short agenda and confirmation note before the meeting.",
+      "blocker_reason": null
+    },
+    {
+      "id": "sig-002",
+      "source": "proof_asset",
+      "title": "Polish public AI secretary proof README",
+      "kind": "proof_asset",
+      "score": 20,
+      "blocked": false,
+      "requires_external_action": false,
+      "reason": "urgency=4, value=5, effort=3",
+      "recommended_next_step": "work_locally_first",
+      "note": "Improves portfolio clarity without touching external systems.",
+      "blocker_reason": null
+    }
+  ],
+  "defer": [
+    {
+      "id": "sig-005",
+      "source": "research",
+      "title": "Read long-form market report",
+      "kind": "research",
+      "score": 9,
+      "blocked": false,
+      "requires_external_action": false,
+      "reason": "urgency=2, value=3, effort=4",
+      "recommended_next_step": "work_locally_first",
+      "note": "Useful but not the best first action today.",
+      "blocker_reason": null
+    },
+    {
+      "id": "sig-003",
+      "source": "inbox",
+      "title": "Reply to vendor discount campaign",
+      "kind": "message",
+      "score": 4,
+      "blocked": false,
+      "requires_external_action": true,
+      "reason": "urgency=1, value=1, effort=1",
+      "recommended_next_step": "prepare_confirmation_before_external_action",
+      "note": "Low value promotional message.",
+      "blocker_reason": null
+    }
+  ],
+  "no_go": [
+    {
+      "id": "sig-004",
+      "source": "project",
+      "title": "Run production calendar automation migration",
+      "kind": "automation",
+      "score": 0,
+      "blocked": true,
+      "requires_external_action": true,
+      "reason": "urgency=3, value=5, effort=5, deadline_boost=+4, blocked_penalty=-20",
+      "recommended_next_step": "do_not_execute_until_unblocked",
+      "note": "High value but unsafe to execute today.",
+      "blocker_reason": "Needs owner approval and a safe test window."
+    }
+  ],
+  "confirmation_queue": [
+    {
+      "id": "59054d9d9def",
+      "source": "calendar",
+      "signal_id": "sig-001",
+      "title": "Stakeholder workflow review at 15:00",
+      "recommended_action": "prepare_confirmation_before_external_action",
+      "reason": "urgency=5, value=4, effort=2, deadline_boost=+4"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "focus_limit": 2,
+  "defer_limit": 3,
+  "score_weights": {
+    "urgency": 2,
+    "value": 3,
+    "effort": -1,
+    "deadline_boost": 4,
+    "blocked_penalty": -20
+  },
+  "deadline_boost_hours": 24,
+  "no_go_if_blocked": true,
+  "low_value_threshold": 6,
+  "safety": "sample-first / no-send / no-modify / confirmation-required"
+}

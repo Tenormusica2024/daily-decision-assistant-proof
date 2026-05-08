@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from decision_engine import build_decision_brief, load_json, render_markdown, stable_queue_id
+from decision_engine import build_decision_brief, load_json, render_markdown, score_signal, stable_queue_id
 
 
 def test_sample_brief_groups_focus_defer_and_no_go():
@@ -50,4 +50,23 @@ def test_markdown_contains_safety_sections():
     assert "No-Go / Blocked" in markdown
     assert "Confirmation Queue" in markdown
     assert "no-send" in markdown
+
+
+def test_string_boolean_fields_are_not_treated_as_truthy_by_default():
+    rules = load_json(ROOT / "samples" / "decision_rules.json")
+    item = score_signal({
+        "id": "sig-string-bool",
+        "source": "sample",
+        "title": "String boolean guard",
+        "urgency": 3,
+        "value": 3,
+        "effort": 1,
+        "deadline_hours": 48,
+        "blocked": "false",
+        "requires_external_action": "false",
+    }, rules)
+
+    assert item["blocked"] is False
+    assert item["requires_external_action"] is False
+    assert item["recommended_next_step"] == "work_locally_first"
 

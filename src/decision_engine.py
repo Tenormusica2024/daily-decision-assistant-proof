@@ -22,13 +22,21 @@ def _number(value: Any, default: int = 0) -> int:
         return default
 
 
+def _bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+    return bool(value)
+
+
 def score_signal(signal: dict[str, Any], rules: dict[str, Any]) -> dict[str, Any]:
     weights = rules.get("score_weights") or {}
     urgency = _number(signal.get("urgency"))
     value = _number(signal.get("value"))
     effort = _number(signal.get("effort"))
     deadline_hours = _number(signal.get("deadline_hours"), default=9999)
-    blocked = bool(signal.get("blocked"))
+    blocked = _bool(signal.get("blocked"))
 
     score = (
         urgency * _number(weights.get("urgency"), 1)
@@ -58,7 +66,7 @@ def score_signal(signal: dict[str, Any], rules: dict[str, Any]) -> dict[str, Any
         "kind": signal.get("kind"),
         "score": score,
         "blocked": blocked,
-        "requires_external_action": bool(signal.get("requires_external_action")),
+        "requires_external_action": _bool(signal.get("requires_external_action")),
         "reason": ", ".join(reasons),
         "recommended_next_step": recommend_next_step(signal, score, rules),
         "note": signal.get("note"),
@@ -67,9 +75,9 @@ def score_signal(signal: dict[str, Any], rules: dict[str, Any]) -> dict[str, Any
 
 
 def recommend_next_step(signal: dict[str, Any], score: int, rules: dict[str, Any]) -> str:
-    if signal.get("blocked"):
+    if _bool(signal.get("blocked")):
         return "do_not_execute_until_unblocked"
-    if signal.get("requires_external_action"):
+    if _bool(signal.get("requires_external_action")):
         return "prepare_confirmation_before_external_action"
     if score <= _number(rules.get("low_value_threshold"), 6):
         return "defer_or_skip"
@@ -78,7 +86,11 @@ def recommend_next_step(signal: dict[str, Any], score: int, rules: dict[str, Any
 
 def build_confirmation_item(item: dict[str, Any]) -> dict[str, Any]:
     return {
-        "id": stable_queue_id(str(item.get("source") or "sample"), str(item.get("id") or ""), str(item.get("title") or "")),
+        "id": stable_queue_id(
+            str(item.get("source") or "sample"),
+            str(item.get("id") or ""),
+            str(item.get("title") or ""),
+        ),
         "source": item.get("source"),
         "signal_id": item.get("id"),
         "title": item.get("title"),

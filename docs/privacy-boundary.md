@@ -14,9 +14,9 @@ This proof slice is sample-first and public-safe by default.
 
 - Real calendar entries
 - Real email or chat messages
-- Real client names, private project names, or NDA details
-- Private GitHub Issue content
-- LLMWIKI / curiosity-wiki private outputs
+- Real customer names, private project names, or NDA details
+- Private issue or support-ticket content
+- Private knowledge-base outputs
 - API tokens, OAuth credentials, local scheduler state
 - Local absolute paths that reveal private environment details
 

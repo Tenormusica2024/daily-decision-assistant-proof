@@ -1,6 +1,6 @@
 # Daily Decision Assistant Proof
 
-A public-safe proof slice for an AI secretary that turns mixed daily signals into a small decision brief without requiring Gmail, Calendar, LLMWIKI, or external APIs.
+A public-safe proof slice for an AI secretary that turns mixed daily signals into a small decision brief without requiring email, calendar, private knowledge-base, or external API access.
 
 ## One-minute summary
 
@@ -10,7 +10,7 @@ This repository demonstrates a practical AI-secretary pattern:
 sample daily signals -> scoring -> today focus / defer / no-go -> confirmation queue
 ```
 
-It is meant as a portfolio proof for:
+It is meant as a reusable proof for:
 
 - daily prioritization support
 - human-in-the-loop decision boundaries
@@ -25,7 +25,7 @@ Review these first:
 2. `src/decision_engine.py` — deterministic scoring and routing logic
 3. `tests/` — behavior and safety checks
 4. `docs/privacy-boundary.md` — what must not be published
-5. `docs/portfolio-copy.md` — how to describe this proof in portfolio/proposal contexts
+5. `docs/showcase-copy.md` — how to describe this proof in public demo contexts
 
 ## What this proves
 
@@ -76,10 +76,10 @@ Action-worthy recommendations are represented as confirmation queue entries for 
 
 ## Public/private boundary
 
-This repository uses synthetic fixtures only. It should not contain real calendar events, real emails, client details, private GitHub Issue content, local absolute paths, tokens, or LLMWIKI/curiosity-wiki outputs.
+This repository uses synthetic fixtures only. It should not contain real calendar events, real emails, client details, private issue content, local absolute paths, tokens, or private knowledge-base outputs.
 
 See:
 
 - `docs/privacy-boundary.md`
 - `docs/public-export-checklist.md`
-- `docs/portfolio-copy.md`
+- `docs/showcase-copy.md`

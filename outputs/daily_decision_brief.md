@@ -11,13 +11,13 @@
 
 ### Stakeholder workflow review at 15:00
 - score: `24`
-- source: `calendar` / kind: `meeting`
+- source: `schedule` / kind: `meeting`
 - reason: urgency=5, value=4, effort=2, deadline_boost=+4
 - next_step: `prepare_confirmation_before_external_action`
 
-### Polish public AI secretary proof README
+### Prepare customer onboarding checklist
 - score: `20`
-- source: `proof_asset` / kind: `proof_asset`
+- source: `operations` / kind: `process_improvement`
 - reason: urgency=4, value=5, effort=3
 - next_step: `work_locally_first`
 
@@ -28,8 +28,8 @@
 
 ## No-Go / Blocked
 
-- Run production calendar automation migration — Needs owner approval and a safe test window.
+- Run production scheduling automation migration — Needs owner approval and a safe test window.
 
 ## Confirmation Queue
 
-- `59054d9d9def` Stakeholder workflow review at 15:00 -> `prepare_confirmation_before_external_action`
+- `6bc442b0f0d6` Stakeholder workflow review at 15:00 -> `prepare_confirmation_before_external_action`

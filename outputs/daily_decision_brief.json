@@ -10,7 +10,7 @@
   "today_focus": [
     {
       "id": "sig-001",
-      "source": "calendar",
+      "source": "schedule",
       "title": "Stakeholder workflow review at 15:00",
       "kind": "meeting",
       "score": 24,
@@ -23,15 +23,15 @@
     },
     {
       "id": "sig-002",
-      "source": "proof_asset",
-      "title": "Polish public AI secretary proof README",
-      "kind": "proof_asset",
+      "source": "operations",
+      "title": "Prepare customer onboarding checklist",
+      "kind": "process_improvement",
       "score": 20,
       "blocked": false,
       "requires_external_action": false,
       "reason": "urgency=4, value=5, effort=3",
       "recommended_next_step": "work_locally_first",
-      "note": "Improves portfolio clarity without touching external systems.",
+      "note": "Improves repeatability without touching external systems.",
       "blocker_reason": null
     }
   ],
@@ -67,7 +67,7 @@
     {
       "id": "sig-004",
       "source": "project",
-      "title": "Run production calendar automation migration",
+      "title": "Run production scheduling automation migration",
       "kind": "automation",
       "score": 0,
       "blocked": true,
@@ -80,8 +80,8 @@
   ],
   "confirmation_queue": [
     {
-      "id": "59054d9d9def",
-      "source": "calendar",
+      "id": "6bc442b0f0d6",
+      "source": "schedule",
       "signal_id": "sig-001",
       "title": "Stakeholder workflow review at 15:00",
       "recommended_action": "prepare_confirmation_before_external_action",

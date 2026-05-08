@@ -1,7 +1,7 @@
 [
   {
     "id": "sig-001",
-    "source": "calendar",
+    "source": "schedule",
     "title": "Stakeholder workflow review at 15:00",
     "kind": "meeting",
     "urgency": 5,
@@ -14,16 +14,16 @@
   },
   {
     "id": "sig-002",
-    "source": "proof_asset",
-    "title": "Polish public AI secretary proof README",
-    "kind": "proof_asset",
+    "source": "operations",
+    "title": "Prepare customer onboarding checklist",
+    "kind": "process_improvement",
     "urgency": 4,
     "value": 5,
     "effort": 3,
     "deadline_hours": 36,
     "requires_external_action": false,
     "blocked": false,
-    "note": "Improves portfolio clarity without touching external systems."
+    "note": "Improves repeatability without touching external systems."
   },
   {
     "id": "sig-003",
@@ -41,7 +41,7 @@
   {
     "id": "sig-004",
     "source": "project",
-    "title": "Run production calendar automation migration",
+    "title": "Run production scheduling automation migration",
     "kind": "automation",
     "urgency": 3,
     "value": 5,
@@ -66,4 +66,3 @@
     "note": "Useful but not the best first action today."
   }
 ]
-

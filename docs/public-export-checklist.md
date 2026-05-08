@@ -6,8 +6,8 @@ Use this checklist before publishing or reusing this proof.
 
 - The demo runs with only `samples/daily_signals.json` and `samples/decision_rules.json`.
 - No real calendar, email, chat, or client data is included.
-- No private GitHub Issue content is included.
-- No LLMWIKI / curiosity-wiki output is included.
+- No private issue or support-ticket content is included.
+- No private knowledge-base output is included.
 - No token, credential, or local absolute path is required.
 - Default behavior is no-send / no-modify / no-execute.
 - Action-worthy items go to a confirmation queue instead of being executed.

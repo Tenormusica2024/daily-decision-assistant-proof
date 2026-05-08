@@ -34,8 +34,8 @@ def test_external_focus_item_goes_to_confirmation_queue():
 
 
 def test_confirmation_queue_id_is_stable():
-    first = stable_queue_id("calendar", "sig-001", "Stakeholder workflow review at 15:00")
-    second = stable_queue_id("calendar", "sig-001", "Stakeholder workflow review at 15:00")
+    first = stable_queue_id("schedule", "sig-001", "Stakeholder workflow review at 15:00")
+    second = stable_queue_id("schedule", "sig-001", "Stakeholder workflow review at 15:00")
 
     assert first == second
     assert len(first) == 12
@@ -69,4 +69,3 @@ def test_string_boolean_fields_are_not_treated_as_truthy_by_default():
     assert item["blocked"] is False
     assert item["requires_external_action"] is False
     assert item["recommended_next_step"] == "work_locally_first"
-

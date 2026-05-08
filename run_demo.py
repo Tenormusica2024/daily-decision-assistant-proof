@@ -21,8 +21,8 @@ def main() -> int:
     report_md = output_dir / "daily_decision_brief.md"
     report_json = output_dir / "daily_decision_brief.json"
 
-    report_md.write_text(render_markdown(brief), encoding="utf-8")
-    report_json.write_text(json.dumps(brief, ensure_ascii=False, indent=2), encoding="utf-8")
+    report_md.write_text(render_markdown(brief), encoding="utf-8", newline="\n")
+    report_json.write_text(json.dumps(brief, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print(f"wrote {report_md.relative_to(ROOT)}")
     print(f"wrote {report_json.relative_to(ROOT)}")

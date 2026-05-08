@@ -18,6 +18,7 @@ Use this checklist before publishing or reusing this proof.
 ```powershell
 python -m pytest tests -q
 python -X utf8 run_demo.py
+python scripts/check_public_boundary.py
 ```
 
 ## Public repository description draft

@@ -22,3 +22,6 @@ jobs:
 
       - name: Run tests
         run: python -m pytest tests -q
+
+      - name: Check public boundary
+        run: python scripts/check_public_boundary.py

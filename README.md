@@ -2,6 +2,8 @@
 
 A public-safe proof slice for an AI secretary that turns mixed daily signals into a small decision brief without requiring email, calendar, private knowledge-base, or external API access.
 
+![Daily Decision Assistant Proof: daily signals to focus, defer, no-go, and human confirmation](docs/assets/daily-decision-assistant-proof-hero.png)
+
 ## One-minute summary
 
 This repository demonstrates a practical AI-secretary pattern:
@@ -60,6 +62,7 @@ Run tests:
 
 ```powershell
 python -m pytest tests -q
+python scripts/check_public_boundary.py
 ```
 
 ## Safety model
